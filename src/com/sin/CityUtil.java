@@ -51,7 +51,7 @@ public class CityUtil {
 	}
 
 	public static Map doth() {
-		String data = readFile("E:/workspace2/county/WebRoot/cityData.txt");
+		String data = readFile(System.getProperty("user.dir") + "/WebRoot/cityData.txt");
 		CityData cityData = JSON.parseObject(data, CityData.class);
 		return cityData.getData();
 	}
